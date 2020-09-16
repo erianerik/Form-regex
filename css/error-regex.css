@@ -1,0 +1,24 @@
+.error-input {
+    border: 1px solid red !important;
+}
+
+.sucess-input {
+    border: 1px solid green !important;
+}
+
+.regex-error {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.img-error {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.error-title {
+    margin: .5rem;
+    color: red;
+    font-size: .9rem;
+}
