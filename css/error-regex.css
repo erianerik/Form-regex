@@ -22,3 +22,7 @@
     color: red;
     font-size: .9rem;
 }
+
+.margin-zero {
+    margin: 0 !important;
+}
