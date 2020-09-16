@@ -1,0 +1,107 @@
+.main-content {
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100%;
+}
+
+.main-content-acess {
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+}
+
+.form-login {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.form-login-content {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.form-login-title {
+    font-size: 1.4rem;
+    color: #2A3740;
+}
+
+.input-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 1rem;
+    font-size: .9rem;
+    border-radius: .3rem;
+    margin-bottom: 1rem;
+    border: 1px solid #58646D;
+}
+
+::placeholder {
+    font-size: .9rem;
+    color: #58646D;
+}
+
+.forget-password {
+    font-size: .8rem;
+    color: #88B0BF;
+    text-align: right;
+}
+
+.form-submit {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-form {
+    border: none;
+    height: 3rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit {
+    background-color: #2A3740;
+    color: #fff;
+}
+
+.form-or {
+    margin: 1rem 0;
+    display: flex;
+}
+
+.form-or hr {
+    width: 30%;
+    height: .1rem;
+    background-color: #58646D;
+    border: none;
+}
+
+.sing-up {
+    background-color: #fff;
+    color: #2A3740;
+    border: 1px solid #58646D;
+}
+
+.main-section-img {
+    grid-column: 2 / 3;
+    grid-row: 1 / 1;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+}
