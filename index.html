@@ -24,16 +24,17 @@
                 <div class="form-login-content">
                     <h2 class="form-login-title">Hello, Welcome Back!</h2>
                     <div class="input-user">
-                        <input class="form-input" type="email" placeholder="Enter your email" name="" id="" required>
-                        <input class="form-input" type="password" placeholder="Enter you password" name="" id=""
+                        <input class="form-input" type="email" placeholder="Enter your email" name="" id="input-email"
                             required>
+                        <input class="form-input" type="password" placeholder="Enter you password" name=""
+                            id="input-password" required>
                         <a href="#" class="forget-password">Forget Password?</a>
                     </div>
 
 
 
                     <div class="form-submit">
-                        <input type="submit" value="Login" class="btn-form submit">
+                        <input type="button" value="Login" class="btn-form submit">
                         <div class="form-or">
                             <hr>
                             <span>or</span>
@@ -51,6 +52,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
+
+
+    <script>
+        var regexEmail = new RegExp("\^[a-z 0-9]{2,}\@{1}([a-z]{2,})\.[a-z]{2,3}$", "g");
+        var inputEmailValue;
+        var inputPasswordValue;
+
+        $("#input-email").change(function (element) {
+            inputEmailValue = element.target.value;
+        })
+
+        $("#input-password").change(function (element) {
+            inputPasswordValue = element.target.value;
+        })
+
+        $(".submit").click(function () {
+            if (regexEmail.test(inputEmailValue)) {
+
+
+            } else {
+                $("#input-email").addClass("error-input");
+                console.log("erro")
+            }
+        })
+
+    </script>
+
 
 </body>
 
