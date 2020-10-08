@@ -7,28 +7,32 @@
 }
 
 .main-content-acess {
+    width: 100%;
+    height: 100%;
     grid-column: 1 / 2;
     grid-row: 1 / 1;
+    background-color: #fff;
 }
 
 .form-login {
     box-sizing: border-box;
-    width: 100%;
+    width: 60%;
     height: 100%;
+    margin: 0 auto;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #fff;
 }
 
-.form-login-content {
-    width: 60%;
-    margin: 0 auto;
+.form-login__form-header {
+    border: none;
+    padding: .8rem 0;
 }
 
 .form-login-title {
     font-size: 1.4rem;
+    font-weight: bold;
     color: #2A3740;
 }
 
@@ -58,12 +62,7 @@
     font-size: .8rem;
     color: #88B0BF;
     text-align: right;
-}
-
-.form-submit {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: .8rem;
 }
 
 .btn-form {
@@ -78,16 +77,29 @@
     color: #fff;
 }
 
-.form-or {
-    margin: 1rem 0;
-    display: flex;
+.form-option {
+    margin: 1rem;
+    text-align: center;
 }
 
-.form-or hr {
+.form-option::after {
+    content: '';
+    display: inline-block;
     width: 30%;
-    height: .1rem;
-    background-color: #58646D;
-    border: none;
+    height: 1px;
+    background-color: #2A3740;
+    vertical-align: middle;
+    margin-left: 2rem;
+}
+
+.form-option::before {
+    content: '';
+    display: inline-block;
+    width: 30%;
+    height: 1px;
+    background-color: #2A3740;
+    vertical-align: middle;
+    margin-right: 2rem;
 }
 
 .sing-up {

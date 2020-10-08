@@ -12,7 +12,9 @@
    <link rel="stylesheet" href="css/error-regex.css">
    <link rel="stylesheet" href="css/form.css">
 
-
+   <!-- Import Jquery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
    <!-- Font -->
    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
@@ -20,97 +22,36 @@
 
 <body>
    <main class="main-content">
+
       <section class="main-content-acess">
          <form action="" class="form-login">
-            <div class="form-login-content">
-               <h2 class="form-login-title">Hello, Welcome Back!</h2>
-               <div class="input-user">
-                  <input class="form-input" type="email" placeholder="Enter your email" name="" id="input-email"
-                     required>
-                  <div class="regex-error regex-error-email">
-                     <img src="./img/error.svg" alt="" class="img-error">
-                     <span class="error-title">Email Invalido!</span>
-                  </div>
-                  <input class="form-input" type="password" placeholder="Enter you password" name="" id="input-password"
-                     required>
-                  <div class="regex-error regex-error-password">
-                     <img src="./img/error.svg" alt="" class="img-error">
-                     <span class="error-title">Password Invalido!</span>
-                  </div>
-                  <a href="#" class="forget-password">Forget Password?</a>
 
+            <fieldset class="form-login__form-header">
+               <legend class="form-login-title">Hello, Welcome Back!</legend>
+            </fieldset>
+            
+            <input class="form-input" type="email" placeholder="Enter your email" name="" id="input-email" required>
 
+            <input class="form-input" type="password" placeholder="Enter you password" name="" id="input-password" required>
 
-                  <div class="form-submit">
-                     <input type="button" value="Login" class="btn-form submit">
-                     <div class="form-or">
-                        <hr>
-                        <span>or</span>
-                        <hr>
-                     </div>
-                     <input type="button" value="Sing Up" class="btn-form sing-up">
-                  </div>
-               </div>
+            <a href="#" class="forget-password">Forget Password?</a>
+
+            <input type="button" value="Login" class="btn-form submit">
+
+            <span class="form-option">or</span>
+
+            <input type="button" value="Sing Up" class="btn-form sing-up">
+
          </form>
       </section>
+
       <section class="main-section-img">
          <img src="./img/background.jpg" alt="" class="main-img">
       </section>
+
    </main>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-      crossorigin="anonymous"></script>
 
-
-   <script>
-      const regexEmail = new RegExp("^[a-z 0-9]{2,}\@{1}([a-z]{2,})\.[a-z]{2,3}$", "g");
-      const regexPassword = new RegExp("[A-Za-z]+[0-9]{2,}", "g");
-      var inputEmailValue;
-
-      var inputPasswordValue;
-      $(".regex-error").hide();
-
-      $("#input-email").change(function (element) {
-         inputEmailValue = element.target.value;
-
-      })
-
-      $("#input-password").change(function (element) {
-         inputPasswordValue = element.target.value;
-      })
-
-      $(".submit").click(function () {
-         $(".regex-error").hide();
-         $("#input-email").removeClass("sucess-input");
-         $("#input-email").removeClass("error-input");
-         $("#input-password").removeClass("sucess-input");
-         $("#input-password").removeClass("error-input");
-
-
-         if (inputEmailValue != undefined && inputEmailValue.match(regexEmail)) {
-            $(".form-input").removeClass("margin-zero");
-            $("#input-email").addClass("sucess-input");
-         } else {
-            $(".form-input").addClass("margin-zero");
-            $("#input-email").addClass("error-input");
-            $(".regex-error-email").show();
-         }
-
-         if (inputPasswordValue != undefined && inputPasswordValue.match(regexPassword)) {
-            $(".form-input").removeClass("margin-zero");
-            $("#input-password").addClass("sucess-input");
-         } else {
-            $(".form-input").addClass("margin-zero");
-            $("#input-password").addClass("error-input");
-            $(".regex-error-password").show();
-         }
-
-
-      })
-
-   </script>
-
+   <script src="js/index.js"></script>
 
 </body>
-
 </html>
